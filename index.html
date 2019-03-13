@@ -14,7 +14,7 @@
   	
             <div id="uputstvo-igra">
              
-              <div id="uputstvoLink" onClick="otvoriObavestenje(this)">
+              <div id="uputstvoLink">
                  Uputstvo za igru Mastermind
               </div>
             </div>
@@ -24,7 +24,7 @@
               <div id="boje-izbor-lista">
                 <ul id="boje-lista"> 
                  <li>
-                    <canvas class="" id="polje0" width="50" height="50"></canvas><!-- zaboravila si width i height ovde-->
+                    <canvas class="" id="polje0" width="50" height="50"></canvas>
                   </li>
                   <li>
                     <canvas class="" id="polje1" width="50" height="50"></canvas>
@@ -52,12 +52,12 @@
                   
                
 
-                  <div id="ucitajDugme" onClick="proveriPogodak()">
-                    <button class="btn1"   >Učitaj</button>
+                  <div id="ucitajDugme" >
+                    <button class="btn1">Učitaj</button>
                   </div>
                   <div id="resetDugme" >
-                    <button class="btn2" onClick="novaIgra()">Nova Igra</button>
-                    <!-- <button class="btn2"  onclick="clickCounter()" type="button" >Nova Igra</button>   -->
+                    <button class="btn2">Nova Igra</button>
+                    
                    </div>
                 </ul>
 
@@ -75,21 +75,21 @@
 
 
             <div class="obavestenje" id="mojeObavestenje">
-              <span class="zatvori kursor" onClick="zatvoriObavestenje()">&times;</span>
+              <span class="zatvori kursor" >&times;</span>
               
               <div class="obavestenje-sadrzaj">
                 <h2> Uputstvo za igranje Masterminda</h2>
-                <p> Kompjuter nasumično izabere redosled od 4 boje        
+                <p> Igrica Mastermind je tako koncipirana da računar nasumično izabere redosled od 4 boje koje se ne prikazuju.                        
                      </p>
                        
-                <p> Cilj igre je da pogodite tačan redosled tih boja u sto manjem broju koraka. 
-                    izbor boje se vrsi klikom na boju. 
+                <p> Cilj igre je da se pogodi tačan redosled tih boja u što manjem broju pokušaja.
+                  Izbor boje se vrši klikom na boju, svaki odgovor se zatim proverava. 
                     </p>
                 
-                     <p> svaki odgovor se proverava i za tacnu boju na tacnom mestu dobijate zelenu boju u odelju za provere.
-                 za boju koja se ne nalazi na pravom mestu dobija se crvena boja.  </p>
+                     <p> Za tačan odgovor tj izbor boje i izbor mesta na kom se nalazi boja su tačni,u odeljku za provere dovija se zelena boja, 
+                       a za tačnu boju koja se ne nalazi na tačnom mestu dobijate crvenu boju u odeljku za provere.  </p>
                      
-                <p>boje možete koristiti nebrojani broj puta prilikom vašeg izbora boja </p>
+                <p>Boje možete koristiti nebrojani broj puta prilikom vašeg izbora kombinacije boja. </p>
                                       
         
                 <p>Srećno!</p>
@@ -98,9 +98,8 @@
         
               </div>
             </div>
-        
-         
-            <div id="result"></div>
+                
+            
           </div>
           </body>
           <link rel="stylesheet" href="MasterMind.css">
