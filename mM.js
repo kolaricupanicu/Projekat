@@ -133,6 +133,13 @@ function napraviOdgovor(){
   return odgovor;
 }
 
+
+
+
+document.querySelector('.btn1').onclick = proveriPogodak;  
+
+
+
 function proveriPogodak(){
     if (pogodak.length === 4){
       var pogodci = []; 
@@ -244,63 +251,44 @@ function vratiDelove(tacanBroj, blizupogBroj){
  }
 
 
-/*
+
  
+var dugme= document.querySelector('.btn2');
+dugme.onclick = novaIgra;  
 function novaIgra(){
-    
-    trenutnaBoja = null
-    odgovor = [];
-    pogodak = [];
-    
-    var dugme= document.getElementsByClassName('btn2');
-    dugme.onclick = function(){  
-      for (var i = 0; i<=3; i++) {
-
-        document.getElementById("polje_"+i).innerHTML = "";
-        document.getElementById("deo").innerHTML = "";
-    
-  }
-
-    }
-
-
- 
-
-
-  }
+  
 
 
 
-
-novaIgra();
-
-
-
-
-function brKlikNovaIgra() {
-  if(typeof(Storage) !== "undefined") {
-    if (localStorage.clickcount) {
-      localStorage.clickcount = Number(localStorage.clickcount)+1;
-    } else {
-      localStorage.clickcount = 1;
-    }
-    document.getElementById("result").innerHTML = "Broj Igranja igre je: " + localStorage.clickcount + " time(s).";
-  } else {
-    document.getElementById("result").innerHTML = "Sorry, your browser does not support web storage...";
-  }
 }
 
-brKlikNovaIgra();
 
-*/
+
+ 
+
+
+  
+
+
+
+
+
+
+
+
+document.querySelector('#uputstvoLink').onclick = otvoriObavestenje;
 
 function otvoriObavestenje() {
-  document.getElementById('mojeObavestenje').style.display = "block";
+document.getElementById('mojeObavestenje').style.display = "block";
 }
 
+document.querySelector('.zatvori').onclick = zatvoriObavestenje;
+
 function zatvoriObavestenje() {
-  document.getElementById('mojeObavestenje').style.display = "none";
+document.getElementById('mojeObavestenje').style.display = "none";
 }
+
+
 
 napraviBojuIzbor();
 napraviTablu();
