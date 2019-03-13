@@ -1,5 +1,5 @@
 # Projekat igrica Mastermind 
-Igrcia Mastermind je tako koncipirana da kračunar nasumično izabere redosled od 4 boje koje se ne prikazuju.                     
+Igrcia Mastermind je tako koncipirana da računar nasumično izabere redosled od 4 boje koje se ne prikazuju.                     
 Cilj igre je da se pogodi tačan redosled tih boja u što manjem broju pokušaja.
 Izbor boje se vrši klikom na boju, svaki odgovor se zatim proverava. 
 Za tačan odgovor tj izbor boje i izbor mesta na kom se nalazi boja su tačni,u odeljku za provere dovija se zelena boja, a za tačnu boju koja se ne nalazi na tačnom mestu dobijate crvenu boju u odeljku za provere. 
