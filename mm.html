@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width,height=device-height, initial-scale=1">
+        
+		<title>Mastermind</title>
+	
+			
+	
+		</head>
+	
+        <div id="glavna-tabla">
+  	
+            <div id="uputstvo-igra">
+             
+              <div id="uputstvoLink" onClick="otvoriObavestenje(this)">
+                 Uputstvo za igru Mastermind
+              </div>
+            </div>
+        
+        
+         <div id="igra-kutija">
+              <div id="boje-izbor-lista">
+                <ul id="boje-lista"> 
+                 <li>
+                    <canvas class="" id="polje0" width="50" height="50"></canvas><!-- zaboravila si width i height ovde-->
+                  </li>
+                  <li>
+                    <canvas class="" id="polje1" width="50" height="50"></canvas>
+                  </li>
+                  <li>
+                    <canvas class="" id="polje2" width="50" height="50"></canvas>
+                  </li>
+                  <li>
+                    <canvas class="" id="polje3" width="50" height="50"></canvas>
+                  </li>
+
+                  <li class='nevidljiv_deo_lista'></li>
+                  <li>
+                    <canvas class="" id="polje4" width="50" height="50"></canvas>
+                  </li>
+                  <li>
+                    <canvas class="" id="polje5" width="50" height="50"></canvas>
+                  </li>
+                  <li>
+                    <canvas class="" id="polje6" width="50" height="50"></canvas>
+                  </li>
+                  <li>
+                    <canvas class="" id="polje7" width="50" height="50"></canvas>
+                  </li>
+                  
+               
+
+                  <div id="ucitajDugme" onClick="proveriPogodak()">
+                    <button class="btn1"   >Učitaj</button>
+                  </div>
+                  <div id="resetDugme" >
+                    <button class="btn2" onClick="novaIgra()">Nova Igra</button>
+                    <!-- <button class="btn2"  onclick="clickCounter()" type="button" >Nova Igra</button>   -->
+                   </div>
+                </ul>
+
+
+
+
+              </div>
+              <div id="praznaPolja"> 
+              </div>
+            </div>
+
+
+
+
+
+
+            <div class="obavestenje" id="mojeObavestenje">
+              <span class="zatvori kursor" onClick="zatvoriObavestenje()">&times;</span>
+              
+              <div class="obavestenje-sadrzaj">
+                <h2> Uputstvo za igranje Masterminda</h2>
+                <p> Kompjuter nasumično izabere redosled od 4 boje        
+                     </p>
+                       
+                <p> Cilj igre je da pogodite tačan redosled tih boja u sto manjem broju koraka. 
+                    izbor boje se vrsi klikom na boju. 
+                    </p>
+                
+                     <p> svaki odgovor se proverava i za tacnu boju na tacnom mestu dobijate zelenu boju u odelju za provere.
+                 za boju koja se ne nalazi na pravom mestu dobija se crvena boja.  </p>
+                     
+                <p>boje možete koristiti nebrojani broj puta prilikom vašeg izbora boja </p>
+                                      
+        
+                <p>Srećno!</p>
+                </div>
+            
+        
+              </div>
+            </div>
+        
+         
+            <div id="result"></div>
+          </div>
+          </body>
+          <link rel="stylesheet" href="MasterMind.css">
+          <script src="mM.js"></script>
+
+</html>
