@@ -1,7 +1,7 @@
 body{
-    background: #585858;
+    background: #949494;
     font-family: 'Spectral SC', serif;
-    font-size: 80%;
+    font-size: 1.2em;
   }
   
   p {
@@ -31,6 +31,7 @@ body{
     justify-content: center;
     font-family: 'Spectral SC', serif;
     padding-top: 10px;
+   
   }
   
   #uputstvoLink:hover {
@@ -169,7 +170,9 @@ body{
     font-weight: bold;
   }
 
-
+  .oznacena_boja{
+    outline:1.5px solid black;
+  }
   /*
   @media (max-width: 500px) {
     .button {
