@@ -110,14 +110,17 @@ function ukloniKlikBoju(){
   }
 }
 
+
 function promeniKursor(el){
-  var mojdeo = document.getElementsByTagName('html');
   trenutnaBoja = el.getContext("2d").fillStyle;
   console.log(trenutnaBoja);
- 
+  if(document.querySelector('.oznacena_boja'))
+    document.querySelector('.oznacena_boja').classList.remove('oznacena_boja');
+
+   el.classList.add('oznacena_boja');
 }
 
-
+// pravljenje kombinacije za pogadjanje
 
 function napraviOdgovor(){
   while(odgovor.length < 4){
@@ -158,8 +161,7 @@ function proveriPogodak(){
   
 };
 
-
-
+// dodavanje boje  
 function promeniBoju(el){
   if (trenutnaBoja){
     
@@ -183,7 +185,7 @@ function promeniBoju(el){
   }
 }
 
-
+//
 
 function uporediOdgovor(odgovor, pogodak){
   var tacanBroj = 0;
@@ -201,7 +203,7 @@ function uporediOdgovor(odgovor, pogodak){
     for (var j = 0; j < odgovor.length; j++){
       if (trOdgovor[i] === trPogodak[j]){
        blizupogBroj++
-       trOdgovor[j] = NaN;
+      trOdgovor[j] = NaN;
       trPogodak[j] = NaN;
       }
     }
@@ -209,6 +211,7 @@ function uporediOdgovor(odgovor, pogodak){
   proveriPogadjanje(tacanBroj, blizupogBroj)
 }
 
+// obavestenje da li je pobednik ili ne 
 function proveriPogadjanje(tacanBroj, blizupogBroj){
   if (tacanBroj == 4){
     alert("pobeda!")
@@ -225,7 +228,7 @@ function proveriPogadjanje(tacanBroj, blizupogBroj){
   }
 }
 
-
+// provera odgovora 
 function vratiDelove(tacanBroj, blizupogBroj){
 
   var delovi = document.querySelector("#deo_lista" + (pogresniPogodci.length - 1));
@@ -251,37 +254,14 @@ function vratiDelove(tacanBroj, blizupogBroj){
  }
 
 
-
- 
-var dugme= document.querySelector('.btn2');
-dugme.onclick = novaIgra;  
-function novaIgra(){
-  
-
-
-
-}
-
-
-
- 
-
-
-  
-
-
-
-
-
-
-
-
+//otvaranje uputstva 
 document.querySelector('#uputstvoLink').onclick = otvoriObavestenje;
 
 function otvoriObavestenje() {
 document.getElementById('mojeObavestenje').style.display = "block";
 }
 
+//zatvaranje uputstva na x
 document.querySelector('.zatvori').onclick = zatvoriObavestenje;
 
 function zatvoriObavestenje() {
@@ -290,11 +270,29 @@ document.getElementById('mojeObavestenje').style.display = "none";
 
 
 
-napraviBojuIzbor();
-napraviTablu();
-napraviOdgovor();
-dodajKlikBoju();
+ 
+document.querySelector('.btn2').onclick = novaIgra;  
+function novaIgra(){
+    //resetuj sve globalne promenljive
+     trenutnaBoja = null
+     pogresanOdgovor = [];
+     odgovor = [];
+     pogodak = [];
+     noviPogodakNiz = []
+     pogresniPogodci = [];
+
+    //obrisi html sa poljima
+    document.querySelector("#praznaPolja").innerHTML = '';
+
+    //napravi sve
+    napraviBojuIzbor();
+    napraviTablu();
+    napraviOdgovor();
+    dodajKlikBoju();
+    
+}
 
 
+novaIgra();
 
 
